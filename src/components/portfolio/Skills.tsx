@@ -1,56 +1,58 @@
 import { motion } from "framer-motion";
+import {
+  Code2,
+  Layout,
+  Server,
+  Database,
+  Wrench,
+  Brain,
+  type LucideIcon,
+} from "lucide-react";
 import Section from "./Section";
 
-const categories = [
+type Category = {
+  name: string;
+  icon: LucideIcon;
+  accent: string;
+  skills: string[];
+};
+
+const categories: Category[] = [
   {
     name: "Languages",
-    skills: [
-      { name: "Java (DSA)", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "C", level: 80 },
-      { name: "JavaScript", level: 88 },
-    ],
+    icon: Code2,
+    accent: "from-purple-500/40 to-blue-500/40",
+    skills: ["Java (DSA)", "Python", "C", "JavaScript"],
   },
   {
     name: "Frontend",
-    skills: [
-      { name: "HTML", level: 95 },
-      { name: "CSS", level: 92 },
-      { name: "React.js", level: 88 },
-      { name: "Tailwind CSS", level: 90 },
-    ],
+    icon: Layout,
+    accent: "from-blue-500/40 to-cyan-500/40",
+    skills: ["HTML", "CSS", "React.js", "Tailwind CSS"],
   },
   {
     name: "Backend",
-    skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express.js", level: 85 },
-    ],
+    icon: Server,
+    accent: "from-pink-500/40 to-purple-500/40",
+    skills: ["Node.js", "Express.js"],
   },
   {
     name: "Databases",
-    skills: [
-      { name: "MongoDB", level: 85 },
-      { name: "MySQL", level: 82 },
-      { name: "Firebase", level: 78 },
-    ],
+    icon: Database,
+    accent: "from-emerald-500/40 to-cyan-500/40",
+    skills: ["MongoDB", "MySQL", "Firebase"],
   },
   {
     name: "Tools",
-    skills: [
-      { name: "Git", level: 88 },
-      { name: "GitHub", level: 90 },
-      { name: "VS Code", level: 95 },
-    ],
+    icon: Wrench,
+    accent: "from-amber-500/40 to-pink-500/40",
+    skills: ["Git", "GitHub", "VS Code"],
   },
   {
     name: "CS Fundamentals",
-    skills: [
-      { name: "OOP", level: 90 },
-      { name: "DBMS", level: 85 },
-      { name: "Operating Systems", level: 80 },
-      { name: "REST APIs", level: 88 },
-    ],
+    icon: Brain,
+    accent: "from-indigo-500/40 to-purple-500/40",
+    skills: ["OOP", "DBMS", "Operating Systems", "REST APIs"],
   },
 ];
 
@@ -58,43 +60,59 @@ export default function Skills() {
   return (
     <Section id="skills" kicker="What I work with" title="Skills & Tech">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {categories.map((cat, i) => (
-          <motion.div
-            key={cat.name}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.05 }}
-            whileHover={{ y: -6 }}
-            className="glass rounded-2xl p-6 group relative overflow-hidden"
-          >
-            <div
-              className="absolute -top-20 -right-20 w-40 h-40 rounded-full opacity-0 group-hover:opacity-30 transition-opacity"
-              style={{ background: "var(--gradient-glow)" }}
-            />
-            <h3 className="font-display font-bold text-lg mb-4 gradient-text">{cat.name}</h3>
-            <div className="space-y-3">
-              {cat.skills.map((s) => (
-                <div key={s.name}>
-                  <div className="flex justify-between text-xs mb-1">
-                    <span>{s.name}</span>
-                    <span className="text-muted-foreground">{s.level}%</span>
+        {categories.map((cat, i) => {
+          const Icon = cat.icon;
+          return (
+            <motion.div
+              key={cat.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              whileHover={{ y: -8 }}
+              className="glass rounded-2xl p-6 group relative overflow-hidden border border-border/60 hover:border-primary/50 transition-colors"
+            >
+              {/* Glow */}
+              <div
+                className={`pointer-events-none absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${cat.accent} blur-2xl`}
+              />
+              <div
+                className="pointer-events-none absolute -top-24 -right-24 w-48 h-48 rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-500"
+                style={{ background: "var(--gradient-glow)" }}
+              />
+
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-5">
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center text-primary-foreground shadow-lg"
+                    style={{ background: "var(--gradient-primary)" }}
+                  >
+                    <Icon size={20} />
                   </div>
-                  <div className="h-1.5 rounded-full bg-secondary overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${s.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-full rounded-full"
-                      style={{ background: "var(--gradient-primary)" }}
-                    />
-                  </div>
+                  <h3 className="font-display font-bold text-lg gradient-text">
+                    {cat.name}
+                  </h3>
                 </div>
-              ))}
-            </div>
-          </motion.div>
-        ))}
+
+                <div className="flex flex-wrap gap-2">
+                  {cat.skills.map((s, idx) => (
+                    <motion.span
+                      key={s}
+                      initial={{ opacity: 0, scale: 0.85 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: 0.1 + idx * 0.05 }}
+                      whileHover={{ scale: 1.08, y: -2 }}
+                      className="relative text-xs px-3 py-1.5 rounded-full bg-secondary/70 border border-border/70 backdrop-blur-sm hover:border-primary/60 hover:text-primary hover:shadow-[0_0_20px_-2px_hsl(var(--primary)/0.5)] transition-all cursor-default"
+                    >
+                      {s}
+                    </motion.span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </Section>
   );
