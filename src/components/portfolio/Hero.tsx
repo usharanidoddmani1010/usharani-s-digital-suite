@@ -134,7 +134,7 @@ export default function Hero() {
             >
               <div className="w-full h-full rounded-full bg-card flex items-start justify-center overflow-hidden">
                 <img
-                  src="https://lh3.googleusercontent.com/d/162hWjSJN1G3Jo3xyCLBwQKnzNqw-NR23=w800"
+                  src="https://drive.google.com/thumbnail?id=162hWjSJN1G3Jo3xyCLBwQKnzNqw-NR23&sz=w800"
                   alt="Usharani"
                   className="w-full h-full object-cover"
                   style={{ objectPosition: "top center" }}
