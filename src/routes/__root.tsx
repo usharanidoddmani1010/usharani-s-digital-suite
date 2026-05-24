@@ -78,6 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Usharani_Portfolio" },
       { property: "og:description", content: "Personal portfolio of Usharani — CSE student & MERN stack developer." },
       { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Usharani_Portfolio" },
+      { name: "twitter:description", content: "Personal portfolio of Usharani — CSE student & MERN stack developer." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b8158f37-1e1c-4fce-8932-e4d0fc1dd5f1/id-preview-a73be096--3d9032b7-af46-41b7-b904-675a65345dd0.lovable.app-1779607776322.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b8158f37-1e1c-4fce-8932-e4d0fc1dd5f1/id-preview-a73be096--3d9032b7-af46-41b7-b904-675a65345dd0.lovable.app-1779607776322.png" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
