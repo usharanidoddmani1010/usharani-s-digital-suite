@@ -76,8 +76,9 @@ export default function Hero() {
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="/resume.pdf"
-              download
+              href="https://drive.google.com/uc?export=download&id=1xNQa88ITTd46nX81oq1qXhLfdWcgGvZP"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium glass hover:bg-secondary transition-colors"
             >
               <Download size={16} />
@@ -127,16 +128,19 @@ export default function Hero() {
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 4, repeat: Infinity }}
             />
-            <motion.div
-              className="absolute inset-0 rounded-full p-[3px]"
+            <div
+              className="absolute inset-0 rounded-full p-[3px] transition-transform duration-500 hover:scale-105"
               style={{ background: "conic-gradient(from 0deg, var(--neon-purple), var(--neon-cyan), var(--neon-blue), var(--neon-purple))" }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             >
               <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
-                <span className="text-7xl md:text-8xl font-display font-bold gradient-text">U</span>
+                <img
+                  src="https://drive.google.com/thumbnail?id=162hWjSJN1G3Jo3xyCLBwQKnzNqw-NR23&sz=w800"
+                  alt="Usharani"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
               </div>
-            </motion.div>
+            </div>
             {/* Floating badges */}
             {["⚛️", "💻", "🚀"].map((emoji, idx) => (
               <motion.div
