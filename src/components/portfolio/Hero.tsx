@@ -132,11 +132,11 @@ export default function Hero() {
               className="absolute inset-0 rounded-full p-[3px] transition-transform duration-500 hover:scale-105"
               style={{ background: "conic-gradient(from 0deg, var(--neon-purple), var(--neon-cyan), var(--neon-blue), var(--neon-purple))" }}
             >
-              <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
+              <div className="w-full h-full rounded-full bg-card flex items-start justify-center overflow-hidden">
                 <img
                   src="https://drive.google.com/thumbnail?id=162hWjSJN1G3Jo3xyCLBwQKnzNqw-NR23&sz=w800"
                   alt="Usharani"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   loading="eager"
                 />
               </div>
