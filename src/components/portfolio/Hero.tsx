@@ -136,7 +136,8 @@ export default function Hero() {
                 <img
                   src="https://drive.google.com/thumbnail?id=162hWjSJN1G3Jo3xyCLBwQKnzNqw-NR23&sz=w800"
                   alt="Usharani"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-[0.82] translate-y-1"
+                  style={{ objectPosition: "top center" }}
                   loading="eager"
                 />
               </div>
