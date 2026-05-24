@@ -134,7 +134,7 @@ export default function Hero() {
             >
               <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
                 <img
-                  src="/profile.jpeg"
+                  src="/pro.jpeg"
                   alt="Usharani"
                   className="w-full h-full object-cover rounded-full"
                   
