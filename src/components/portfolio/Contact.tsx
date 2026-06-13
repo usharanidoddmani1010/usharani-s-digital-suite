@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send } from "lucide-react";
 import { useState } from "react";
 import Section from "./Section";
 
@@ -37,13 +37,6 @@ export default function Contact() {
             >
               <Mail size={16} className="text-primary" />
               usharanidoddmani018@gmail.com
-            </a>
-            <a
-              href="tel:+919964747849"
-              className="flex items-center gap-3 p-3 rounded-xl bg-secondary/40 hover:bg-secondary transition-colors"
-            >
-              <Phone size={16} className="text-primary" />
-              +91 99647 47849
             </a>
             <a
               href="https://linkedin.com/in/usharani-s-39a397374"
