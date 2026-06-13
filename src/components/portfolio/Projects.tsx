@@ -9,7 +9,7 @@ type Project = {
   features: string[];
   gradient: string;
   emoji: string;
-  github: string;
+  github?: string;
   demo: string;
   themed?: "music";
 };
@@ -29,8 +29,8 @@ const projects: Project[] = [
     ],
     gradient: "from-purple-500/30 to-blue-500/30",
     emoji: "🚀",
-    github: "#",
-    demo: "#",
+    github: "https://github.com/usharani-cs24-bmsce/hackthon-hub-bmsce.git",
+    demo: "https://hackthon-hub-bmsce.lovable.app",
   },
   {
     title: "Spotify Clone",
@@ -50,6 +50,23 @@ const projects: Project[] = [
     github: "https://github.com/usharanidoddmani1010/My-spotify.git",
     demo: "https://my-spotify-2026.netlify.app/",
     themed: "music",
+  },
+  {
+    title: "BMS College University Website",
+    stack: ["React.js", "Tailwind CSS", "JavaScript"],
+    description:
+      "Developed a modern, responsive university website with a clean and user-friendly interface. The website showcases academic information, departments, campus facilities, events, and admission details while following modern UI/UX principles. Designed to provide students and visitors with an engaging and seamless browsing experience across all devices.",
+    features: [
+      "Responsive Design",
+      "Modern UI/UX",
+      "Department & Course Information",
+      "Campus Information",
+      "Event Section",
+      "Fast Navigation",
+    ],
+    gradient: "from-amber-500/30 to-orange-500/30",
+    emoji: "🎓",
+    demo: "https://eloquent-kangaroo-070789.netlify.app/",
   },
 ];
 
@@ -139,14 +156,16 @@ export default function Projects() {
                 >
                   <ExternalLink size={12} /> Live Demo
                 </a>
-                <a
-                  href={p.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full border border-border hover:bg-secondary transition-colors"
-                >
-                  <Github size={12} /> GitHub
-                </a>
+                {p.github && p.github !== "#" && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs px-4 py-2 rounded-full border border-border hover:bg-secondary transition-colors"
+                  >
+                    <Github size={12} /> GitHub
+                  </a>
+                )}
               </div>
             </div>
           </motion.article>
