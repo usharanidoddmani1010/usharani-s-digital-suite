@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Music2 } from "lucide-react";
+import { ExternalLink, Github, Music2, Utensils } from "lucide-react";
 import Section from "./Section";
 
 type Project = {
@@ -11,7 +11,7 @@ type Project = {
   emoji: string;
   github?: string;
   demo: string;
-  themed?: "music";
+  themed?: "music" | "restaurant";
 };
 
 const projects: Project[] = [
@@ -68,12 +68,30 @@ const projects: Project[] = [
     emoji: "🎓",
     demo: "https://eloquent-kangaroo-070789.netlify.app/",
   },
+  {
+    title: "EmberX Restaurant Website",
+    stack: ["React.js", "Tailwind CSS", "JavaScript", "Responsive Design", "Modern UI/UX"],
+    description:
+      "Collaborated directly with the restaurant team to understand their business requirements and design a modern, responsive restaurant website that strengthens their online presence. The website provides customers with an engaging experience through an attractive interface, easy navigation, menu showcase, contact information, and reservation details, making restaurant information easily accessible across all devices.",
+    features: [
+      "Responsive Design",
+      "Modern UI/UX",
+      "Menu Showcase",
+      "Contact & Reservation",
+      "Easy Navigation",
+      "Attractive Interface",
+    ],
+    gradient: "from-orange-500/30 to-red-500/30",
+    emoji: "🍽️",
+    demo: "https://emberx-restaurant.lovable.app/",
+    themed: "restaurant",
+  },
 ];
 
 export default function Projects() {
   return (
     <Section id="projects" kicker="Selected work" title="Projects">
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6 items-stretch">
         {projects.map((p, i) => (
           <motion.article
             key={p.title}
@@ -82,12 +100,17 @@ export default function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.1 }}
             whileHover={{ y: -8 }}
-            className={`glass rounded-2xl p-6 relative overflow-hidden group border border-border/60 hover:border-primary/50 transition-colors ${
+            className={`glass rounded-2xl p-6 relative overflow-hidden group border border-border/60 hover:border-primary/50 transition-all duration-300 h-full flex flex-col ${
               i === 0 ? "md:col-span-2" : ""
             }`}
           >
             <div
-              className={`absolute inset-0 bg-gradient-to-br ${p.gradient} opacity-0 group-hover:opacity-100 transition-opacity`}
+              className={`absolute inset-0 bg-gradient-to-br ${p.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+            />
+
+            {/* Glowing hover border */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              style={{ boxShadow: "0 0 30px 2px rgba(var(--neon-purple-rgb, 139 92 246), 0.15), inset 0 0 20px 1px rgba(var(--neon-cyan-rgb, 34 211 238), 0.08)" }}
             />
 
             {/* Music-themed decoration */}
@@ -119,7 +142,37 @@ export default function Projects() {
               </>
             )}
 
-            <div className="relative">
+            {/* Restaurant-themed decoration */}
+            {p.themed === "restaurant" && (
+              <>
+                <div className="pointer-events-none absolute -right-10 -top-10 w-40 h-40 rounded-full border border-orange-400/30" />
+                <div className="pointer-events-none absolute -right-4 -top-4 w-24 h-24 rounded-full border border-orange-400/20" />
+                <Utensils
+                  className="pointer-events-none absolute right-6 top-6 text-orange-400/40 group-hover:text-orange-400/80 transition-colors"
+                  size={28}
+                />
+                <div className="pointer-events-none absolute bottom-4 right-4 flex gap-2 opacity-30 group-hover:opacity-60 transition-opacity">
+                  {Array.from({ length: 3 }).map((_, idx) => (
+                    <motion.div
+                      key={idx}
+                      className="w-1.5 rounded-full bg-gradient-to-t from-orange-500 to-red-300"
+                      animate={{
+                        height: [12, 28, 12],
+                        opacity: [0.5, 1, 0.5],
+                      }}
+                      transition={{
+                        duration: 2 + idx * 0.4,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: idx * 0.3,
+                      }}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+
+            <div className="relative flex flex-col flex-1">
               <div className="flex items-start justify-between mb-3 gap-3">
                 <div className="flex items-center gap-3">
                   <div className="text-3xl">{p.emoji}</div>
@@ -146,7 +199,7 @@ export default function Projects() {
                   </li>
                 ))}
               </ul>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap mt-auto">
                 <a
                   href={p.demo}
                   target="_blank"

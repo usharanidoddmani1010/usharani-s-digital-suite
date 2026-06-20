@@ -41,7 +41,7 @@ export default function Contact() {
             <a
               href="https://linkedin.com/in/usharani-s-39a397374"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 p-3 rounded-xl bg-secondary/40 hover:bg-secondary transition-colors"
             >
               <Linkedin size={16} className="text-primary" />
@@ -50,7 +50,7 @@ export default function Contact() {
             <a
               href="https://github.com/usharanidoddmanil010"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 p-3 rounded-xl bg-secondary/40 hover:bg-secondary transition-colors"
             >
               <Github size={16} className="text-primary" />

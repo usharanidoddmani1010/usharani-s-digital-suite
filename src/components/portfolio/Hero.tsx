@@ -76,9 +76,9 @@ export default function Hero() {
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="https://drive.google.com/uc?export=download&id=1xNQa88ITTd46nX81oq1qXhLfdWcgGvZP"
+              href="https://drive.google.com/file/d/1f2gjAjyyuWvzhPWssy0QYm95iHkqmTnq/view?usp=sharing"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium glass hover:bg-secondary transition-colors"
             >
               <Download size={16} />
@@ -105,7 +105,7 @@ export default function Hero() {
                 key={label}
                 href={href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="p-3 rounded-full glass hover:scale-110 hover:text-primary transition-all"
               >
