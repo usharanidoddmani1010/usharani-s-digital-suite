@@ -8,6 +8,7 @@ import Projects from "@/components/portfolio/Projects";
 import Achievements from "@/components/portfolio/Achievements";
 import Education from "@/components/portfolio/Education";
 import Contact from "@/components/portfolio/Contact";
+import Certificates from "@/components/portfolio/Certificates";
 import Footer from "@/components/portfolio/Footer";
 import { ThemeProvider } from "@/components/portfolio/ThemeProvider";
 
@@ -63,7 +64,9 @@ function Index() {
         <Projects />
         <Achievements />
         <Education />
+        <Certificates />
         <Contact />
+
       </main>
       <Footer />
     </ThemeProvider>
