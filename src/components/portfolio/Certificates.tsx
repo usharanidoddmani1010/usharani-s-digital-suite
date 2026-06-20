@@ -22,9 +22,12 @@ export default function Certificates() {
       id="certificates"
       kicker="Credentials"
       title="Certificates & Achievements"
-      subtitle="A collection of certifications and accomplishments that reflect my continuous learning journey and technical growth."
     >
+      <p className="text-center text-muted-foreground max-w-2xl mx-auto -mt-6 mb-12">
+        A collection of certifications and accomplishments that reflect my continuous learning journey and technical growth.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
         {certificates.map((c, i) => (
           <motion.a
             key={c.id}
