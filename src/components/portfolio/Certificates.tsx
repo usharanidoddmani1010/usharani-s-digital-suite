@@ -3,14 +3,14 @@ import { ExternalLink, Award } from "lucide-react";
 import Section from "./Section";
 
 const certificates = [
-  { id: "1ymVYQ4hDmi8ldmixu_0FNABvKBtKzZ4i", title: "Certificate 1" },
-  { id: "17g7mpO-b2biJrwK1QW-HvgkddiRaDkIi", title: "Certificate 2" },
-  { id: "11xZQVWWL47MP4qp_ZASq9K6UpMXBkHZl", title: "Certificate 3" },
-  { id: "1axQljNmaab4SG_2UTM_IXfz470S5kwLp", title: "Certificate 4" },
-  { id: "1_HV0qwKrjdanUIt9vP5ILb25R8ug0O84", title: "Certificate 5" },
-  { id: "1kGGmjrujdlRLZFU4BWc8ScZ-PVr99iUH", title: "Certificate 6" },
-  { id: "1IbMt1sGETVk3NW65Pj8NQb2W_uddosVu", title: "Certificate 7" },
-  { id: "1Ng4mLt1-7U2XVeO1jgEd6wSWRnJtRtcG", title: "Certificate 8" },
+  { id: "1ymVYQ4hDmi8ldmixu_0FNABvKBtKzZ4i", title: "Hackathon Participation" },
+  { id: "17g7mpO-b2biJrwK1QW-HvgkddiRaDkIi", title: "Red Hat" },
+  { id: "11xZQVWWL47MP4qp_ZASq9K6UpMXBkHZl", title: "Web Design" },
+  { id: "1axQljNmaab4SG_2UTM_IXfz470S5kwLp", title: "Linux" },
+  { id: "1_HV0qwKrjdanUIt9vP5ILb25R8ug0O84", title: "GeeksforGeeks (GFG)" },
+  { id: "1kGGmjrujdlRLZFU4BWc8ScZ-PVr99iUH", title: "Agentic AI" },
+  { id: "1IbMt1sGETVk3NW65Pj8NQb2W_uddosVu", title: "#100DaysOfCode" },
+  { id: "1Ng4mLt1-7U2XVeO1jgEd6wSWRnJtRtcG", title: "GitHub" },
 ];
 
 const thumb = (id: string) => `https://drive.google.com/thumbnail?id=${id}&sz=w1000`;
