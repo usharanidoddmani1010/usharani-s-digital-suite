@@ -28,19 +28,13 @@ const categories: Category[] = [
     name: "Frontend",
     icon: Layout,
     accent: "from-blue-500/40 to-cyan-500/40",
-    skills: ["HTML", "CSS", "React.js", "Tailwind CSS"],
+    skills: ["HTML", "CSS", "JavaScript", "React.js", "React Native", "Tailwind CSS"],
   },
   {
-    name: "Backend",
+    name: "Backend & Databases",
     icon: Server,
     accent: "from-pink-500/40 to-purple-500/40",
-    skills: ["Node.js", "Express.js"],
-  },
-  {
-    name: "Databases",
-    icon: Database,
-    accent: "from-emerald-500/40 to-cyan-500/40",
-    skills: ["MongoDB", "MySQL", "Firebase"],
+    skills: ["Node.js", "Express.js", "MongoDB", "MySQL", "PostgreSQL", "Firebase"],
   },
   {
     name: "Tools",
