@@ -31,10 +31,16 @@ const categories: Category[] = [
     skills: ["HTML", "CSS", "JavaScript", "React.js", "React Native", "Tailwind CSS"],
   },
   {
-    name: "Backend & Databases",
+    name: "Backend",
     icon: Server,
     accent: "from-pink-500/40 to-purple-500/40",
-    skills: ["Node.js", "Express.js", "MongoDB", "MySQL", "PostgreSQL", "Firebase"],
+    skills: ["Node.js", "Express.js"],
+  },
+  {
+    name: "Databases",
+    icon: Database,
+    accent: "from-emerald-500/40 to-cyan-500/40",
+    skills: ["MongoDB", "MySQL", "PostgreSQL", "Firebase"],
   },
   {
     name: "Tools",
