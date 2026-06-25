@@ -33,6 +33,25 @@ const projects: Project[] = [
     demo: "https://hackthon-hub-bmsce.lovable.app",
   },
   {
+    title: "Smart Attendance System using QR Code & Fake Detection",
+    stack: ["React Native", "Supabase", "QR Authentication", "GPS APIs"],
+    description:
+      "Innovative Smart Attendance System combining QR code authentication with GPS-based location verification to prevent proxy attendance and ensure authenticity. Automates the entire attendance process, reducing manual effort by over 75% while improving accuracy, transparency, and efficiency for educational institutions.",
+    features: [
+      "Secure QR Code Attendance",
+      "GPS-Based Fake Attendance Detection",
+      "Time-Bound QR Validation",
+      "Real-Time Attendance Tracking",
+      "Student & Admin Dashboard",
+      "Attendance History Management",
+      "Automated Attendance Records",
+      "Location Verification",
+    ],
+    gradient: "from-cyan-500/30 to-indigo-500/30",
+    emoji: "📱",
+    demo: "https://smart-attendance-bmsce.lovable.app",
+  },
+  {
     title: "Spotify Clone",
     stack: ["HTML", "CSS", "JavaScript"],
     description:
