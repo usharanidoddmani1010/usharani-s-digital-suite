@@ -105,6 +105,25 @@ const projects: Project[] = [
     demo: "https://emberx-restaurant.lovable.app/",
     themed: "restaurant",
   },
+  {
+    title: "Personal Portfolio Website",
+    stack: ["React.js", "Tailwind CSS", "Framer Motion", "JavaScript", "Responsive Design"],
+    description:
+      "Designed and developed a modern personal portfolio website to showcase my technical skills, projects, certifications, achievements, and academic journey. Built with a focus on responsive design, smooth animations, and professional UI/UX to create a strong online presence for recruiters, collaborators, and potential employers.",
+    features: [
+      "Modern Responsive Design",
+      "Interactive Project Showcase",
+      "Certificates & Achievements Section",
+      "Resume Download Integration",
+      "Contact Form & Social Links",
+      "Smooth Animations and Transitions",
+      "Mobile-Friendly User Experience",
+      "Professional Developer Branding",
+    ],
+    gradient: "from-pink-500/30 to-violet-500/30",
+    emoji: "💼",
+    demo: "https://usharani-portfolio-main.lovable.app",
+  },
 ];
 
 export default function Projects() {
